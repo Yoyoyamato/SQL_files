@@ -18,8 +18,6 @@ ALTER TABLE directors
 ADD COLUMN date_of_birth DATE,
 ADD COLUMN nationality VARCHAR(120),
 
-DROP TABLE movies
-
 
 CREATE TABLE movies (
     movie_id serial PRIMARY KEY,
@@ -31,7 +29,8 @@ CREATE TABLE movies (
     director_id INT REFERENCES directors(director_id)
 );
 
-
+-- if I want to drop a table
+-- DROP TABLE movies
 
 ALTER TABLE movies 
 ADD COLUMN language VARCHAR(150);
